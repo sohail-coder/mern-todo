@@ -92,6 +92,6 @@ todoRouter.route("/edit/:id").post(function (req, res) {
 
 app.use("/todo", todoRouter);
 
-app.listen(PORT, function () {
+app.listen(process.env.PORT || 5000, function () {
   console.log("listening to port " + PORT);
 });
