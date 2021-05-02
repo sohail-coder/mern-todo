@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 mongoose.connect(
-  "mongodb+srv://admin:sohail@cluster0.gxhwx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "mongodb+srv://admin123:Sohail99@cluster0.acej1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -95,6 +95,6 @@ app.get("/", (req, res) => {
   res.status(200).send("HELLO WELCOME TO SERVER");
 });
 
-app.listen(process.env.PORT, function () {
+app.listen(process.env.PORT || 5000, function () {
   console.log("listening to port " + PORT);
 });
