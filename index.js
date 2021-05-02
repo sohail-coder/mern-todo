@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 mongoose.connect(
-  "mongodb+srv://admin:Sohail@99@cluster0.aaenc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "mongodb+srv://admin:sohail@cluster0.gxhwx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -91,7 +91,10 @@ todoRouter.route("/edit/:id").post(function (req, res) {
 });
 
 app.use("/todo", todoRouter);
+app.get("/", (req, res) => {
+  res.status(200).send("HELLO WELCOME TO SERVER");
+});
 
-app.listen(process.env.PORT || 5000, function () {
+app.listen(process.env.PORT, function () {
   console.log("listening to port " + PORT);
 });
