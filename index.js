@@ -91,10 +91,14 @@ todoRouter.route("/edit/:id").post(function (req, res) {
 });
 
 app.use("/todo", todoRouter);
+app.get("/beacon", (req, res) => {
+  res.type("application/json");
+  res.send({ price: 6.0, id: 2, url: "http://localhost:3000" });
+});
 app.get("/", (req, res) => {
   res.status(200).send("HELLO WELCOME TO SERVER");
 });
 
-app.listen(process.env.PORT || 5000, function () {
+app.listen(process.env.PORT || 6000, function () {
   console.log("listening to port " + PORT);
 });
