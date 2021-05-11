@@ -93,7 +93,7 @@ todoRouter.route("/edit/:id").post(function (req, res) {
 app.use("/todo", todoRouter);
 app.get("/beacon", (req, res) => {
   res.type("application/json");
-  res.send({ price: 6.00});
+  res.send({ price: 6.0,id:2});
 });
 app.get("/", (req, res) => {
   res.status(200).send("HELLO WELCOME TO SERVER");
